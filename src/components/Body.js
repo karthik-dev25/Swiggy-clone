@@ -7,18 +7,15 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const RestaurantList = useRestaurantCard();
-  console.log("RestaurantList: ", RestaurantList);
   const [filteredRestaurants, setFilteredRestaurants] =
     useState(RestaurantList);
-  console.log("filteredRestaurants: ", filteredRestaurants);
   const [searchText, setSearchText] = useState("");
 
   const IsOnline = useOnlineStatus();
-  console.log("IsOnline: ", IsOnline);
 
   useEffect(() => {
     setFilteredRestaurants(RestaurantList);
-  }, []);
+  }, [RestaurantList]);
 
   if (!IsOnline) {
     return <h1>No Internet, Please check your Internet !!</h1>;
