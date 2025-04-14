@@ -21,10 +21,11 @@ class UserClass extends React.Component {
     const { count } = this.state;
     console.log("Child Render")
     return (
-      <div className="user-card">
-        <h1>Count:{count}</h1>
-        <div className="count-btn">
+      <div className="w-56 p-4 m-4">
+        <h1 className="font-bold">Count:{count}</h1>
+        <div className="flex flex-col">
           <button
+          className="bg-amber-300 px-4 py-2 m-2 rounded-lg cursor-pointer"
             onClick={() => {
               this.setState({
                 count: this.state.count + 1,
@@ -34,6 +35,7 @@ class UserClass extends React.Component {
             Increment
           </button>
           <button
+          className="bg-amber-300 px-4 py-2 m-2 rounded-lg cursor-pointer"
             onClick={() => {
               this.setState({
                 count: this.state.count - 1,
@@ -43,6 +45,7 @@ class UserClass extends React.Component {
             Decrement
           </button>
           <button
+          className="bg-amber-300 px-4 py-2 m-2 rounded-lg cursor-pointer"
             onClick={() => {
               this.setState({
                 count: 0,

@@ -14,7 +14,7 @@ const useRestaurantCard = () => {
       const json = await data.json();
       console.log('json: ', json);
       setRestaurantsList(
-        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
     } catch (error) {

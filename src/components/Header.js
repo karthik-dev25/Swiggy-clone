@@ -9,33 +9,33 @@ const Header = () => {
   const IsOnline = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+    <div className="flex justify-between px-4 items-center shadow-lg">
+      <div>
+        <img className="w-38" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul>
-        <li>
+      <div>
+        <ul className="flex items-center font-medium cursor-pointer">
+        <li className="mx-4 hover:text-amber-300">
            Online Status: {IsOnline ? "✅" : "🔴"}
           </li>
-          <li>
+          <li className="mx-4 hover:text-amber-300">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="mx-4 hover:text-amber-300">
             <Link to="/about">About US</Link>
           </li>
-          <li>
+          <li className="mx-4 hover:text-amber-300">
             <Link to="/contact">Contact US</Link>
           </li>
-          <li>
+          <li className="mx-4 hover:text-amber-300">
             <Link to="/store">Store</Link>
           </li>
-          <li>Cart</li>
+          <li className="mx-4 hover:text-amber-300">Cart</li>
           <button
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
-            className="login-btn"
+            className="bg-amber-300 px-4 py-2 rounded-lg cursor-pointer"
           >
             {btnName}
           </button>

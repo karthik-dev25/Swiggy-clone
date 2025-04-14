@@ -24,8 +24,8 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <h1>About US Page is here</h1>
-      <UserClass name="First" />
+      <h1 className="font-bold">About US Page is here</h1>
+      <UserClass name="Karthik" />
     </div>
   );
 };
