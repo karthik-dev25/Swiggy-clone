@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,9 @@ class UserClass extends React.Component {
     console.log("Child Render")
     return (
       <div className="w-56 p-4 m-4">
+      <UserContext.Consumer>
+        {(data)=><h1 className="font-bold">UserName:{data.loggedInUser}</h1>}
+      </UserContext.Consumer>
         <h1 className="font-bold">Count:{count}</h1>
         <div className="flex flex-col">
           <button

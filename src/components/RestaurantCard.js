@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
+
 const RestaurantCard = (props) => {
   const {
     cloudinaryImageId,
@@ -8,6 +11,8 @@ const RestaurantCard = (props) => {
     sla: { deliveryTime },
   } = props?.resData?.info;
 
+  const {loggedInUser} = useContext(UserContext)
+
   return (
     <div className="w-[250px] h-[65vh] m-4 p-2 bg-gray-100 hover:bg-gray-200">
       <img className="w-58 h-56" alt="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId} />
@@ -16,6 +21,7 @@ const RestaurantCard = (props) => {
       <div className="w-12">{cuisines.join(",")}</div>
       <p>{costForTwo}</p>
       <p>{deliveryTime} Minutes</p>
+      <p>{loggedInUser}</p>
     </div>
   );
 };

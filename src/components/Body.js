@@ -1,20 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { RES_Data } from "../utils/constants";
 import { withOfferLabel } from "./RestaurantCard";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [RestaurantList, setRestaurantsList] = useState([]);
-  console.log("RestaurantList: ", RestaurantList);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   const IsOnline = useOnlineStatus();
 
   const RestaurantCardWithOffer = withOfferLabel(RestaurantCard);
+
+  const {loggedInUser,setUserName} = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -25,11 +27,11 @@ const Body = () => {
       const data = await fetch(RES_Data);
       const json = await data.json();
       setRestaurantsList(
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setFilteredRestaurants(
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
     } catch (error) {
@@ -77,6 +79,16 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+        </div>
+        <div>
+        <input
+          className="w-80 border-1 rounded-lg mx-2 p-2"
+          type="search"
+          value={loggedInUser}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
         </div>
       </div>
       <div className="flex flex-wrap">
