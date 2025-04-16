@@ -5,6 +5,11 @@ const useRestaurantMenu = (resId) => {
   const [resInfo, setRefInfo] = useState(null);
   useEffect(() => {
     fetchData();
+    console.log("ComponentMounted");
+
+    return ()=>{
+      console.log("Component Will Unmount")
+    }
   }, []);
 
   const fetchData = async () => {

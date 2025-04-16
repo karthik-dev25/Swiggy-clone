@@ -7,6 +7,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantsMenu from "./components/RestaurantsMenu";
+import ProductListing from "./components/ProductListing";
 
 const AppLayout = () => {
   return (
@@ -38,8 +39,9 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/store",
-        element:<Suspense fallback={<h1>Loading....</h1>}> <Store /></Suspense>,
+        element:<Suspense fallback={<h1>Loading....</h1>}> <ProductListing /></Suspense>,
       },
+      
       {
         path: "/restaurant/:resId",
         element: <RestaurantsMenu />,
