@@ -20,8 +20,8 @@ const Header = () => {
       </div>
       <div>
         <ul className="flex items-center font-medium cursor-pointer">
-        <li className="mx-4 hover:text-amber-300">
-           Online Status: {IsOnline ? "✅" : "🔴"}
+          <li className="mx-4 hover:text-amber-300">
+            Online Status: {IsOnline ? "✅" : "🔴"}
           </li>
           <li className="mx-4 hover:text-amber-300">
             <Link to="/">Home</Link>
@@ -35,7 +35,9 @@ const Header = () => {
           <li className="mx-4 hover:text-amber-300">
             <Link to="/store">Store</Link>
           </li>
-          <li className="mx-4 hover:text-amber-300">Cart ({cartItems.length} items)</li>
+          <li className="mx-4 hover:text-amber-300">
+            <Link to="/cart">Cart ({cartItems.length} items)</Link>
+          </li>
           <button
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
