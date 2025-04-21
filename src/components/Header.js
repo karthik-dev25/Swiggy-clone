@@ -3,10 +3,13 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const context = useContext(UserContext);
   const [btnName, setBtnName] = useState("Login");
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   const IsOnline = useOnlineStatus();
 
@@ -32,7 +35,7 @@ const Header = () => {
           <li className="mx-4 hover:text-amber-300">
             <Link to="/store">Store</Link>
           </li>
-          <li className="mx-4 hover:text-amber-300">Cart (0 items)</li>
+          <li className="mx-4 hover:text-amber-300">Cart ({cartItems.length} items)</li>
           <button
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
