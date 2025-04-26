@@ -1,0 +1,107 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "16560",
+        "name": "A2B - Adyar Ananda Bhavan",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/15/87515de5-1163-4669-9d34-56fb1d79dae4_16560.jpg",
+        "locality": "Mogappair",
+        "areaName": "Everest Colony",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "South Indian",
+            "Sweets",
+            "Chinese"
+        ],
+        "avgRating": 4.5,
+        "veg": true,
+        "parentId": "22",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "38K+",
+        "sla": {
+            "deliveryTime": 30,
+            "lastMileTravel": 2.3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "2.3 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-04-26 22:30:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "Rxawards/_CATEGORY-Mithai.png",
+                    "description": "Delivery!"
+                },
+                {
+                    "imageId": "Rxawards/_CATEGORY-South%20Indian.png",
+                    "description": "Delivery!"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Rxawards/_CATEGORY-Mithai.png"
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Rxawards/_CATEGORY-South%20Indian.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "₹166 OFF",
+            "subHeader": "ABOVE ₹349",
+            "discountTag": "FLAT DEAL",
+            "headerTypeV2": 12
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-f5de8084-6c9e-4dcd-be39-5605e9f829fa"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/chennai/a2b-adyar-ananda-bhavan-mogappair-everest-colony-rest16560",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

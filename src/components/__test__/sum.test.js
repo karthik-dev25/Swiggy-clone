@@ -1,4 +1,4 @@
-import {sum} from "../components/sum";
+import {sum} from "../sum";
 
 test("Sum function will give sum of the to numbers", () => {
   let result = sum(3, 5);

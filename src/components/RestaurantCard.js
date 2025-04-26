@@ -2,6 +2,7 @@ import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
+  console.log('props: ', props);
   const {
     cloudinaryImageId,
     name,
@@ -32,7 +33,7 @@ export const withOfferLabel = (RestaurantCard) =>{
       <div>
         <label className="absolute mt-48 ml-6 text-white font-bold bg-black p-1">{props?.resData?.info?.
           aggregatedDiscountInfoV3?.header + " " + props?.resData?.info?.
-          aggregatedDiscountInfoV3?.header}</label>
+          aggregatedDiscountInfoV3?.subHeader}</label>
         <RestaurantCard {...props}/>
       </div>
     )
