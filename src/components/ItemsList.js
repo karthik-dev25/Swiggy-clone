@@ -8,7 +8,7 @@ const ItemsList = ({ data }) => {
     dispatch(addItem(item));
   };
   return (
-    <div className="flex border-b-1">
+    <div data-testid="foodItems" className="flex border-b-1">
       <div className="w-9/12 text-left p-4">
         <div>{data?.name}</div>
         <div>{data?.price ? data?.price / 100 : data?.defaultPrice}</div>
