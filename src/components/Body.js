@@ -48,6 +48,7 @@ const Body = () => {
     <div className=" w-full flex flex-col justify-center">
       <div className="flex justify-center m-4">
         <input
+        data-testid="searchInput"
           className="w-80 border-1 rounded-lg mx-2 p-2"
           placeholder="Search Restaurants"
           type="search"
