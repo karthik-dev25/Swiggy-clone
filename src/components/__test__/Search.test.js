@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen} from "@testing-library/react";
 import Body from "../Body";
 import MOCK_Data from "./mocks/resListMock.json";
 import { act } from "react";
@@ -54,11 +54,13 @@ it("Should Filter with Top Rated Restaurants", async () => {
 
   expect(beforeFilter.length).toBe(8);
 
-  const filterBtn = screen.getByRole("button",{name:"Top Rated Restaurants"});
+  const filterBtn = screen.getByRole("button", {
+    name: "Top Rated Restaurants",
+  });
 
   fireEvent.click(filterBtn);
 
   const afterFilter = screen.getAllByTestId("resCard");
 
-  expect(afterFilter.length).toBe(2)
+  expect(afterFilter.length).toBe(2);
 });
