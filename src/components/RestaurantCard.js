@@ -2,7 +2,6 @@ import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
-  console.log('props: ', props);
   const {
     cloudinaryImageId,
     name,
